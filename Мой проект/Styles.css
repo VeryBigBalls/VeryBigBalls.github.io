@@ -1,0 +1,207 @@
+body {
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff;
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
+  
+  header {
+    background: #3498db;
+    color: white;
+    padding: 1em 0;
+    text-align: center;
+  }
+  
+  header nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 15px;
+    font-size: 1.1em;
+    transition: color 0.3s;
+  }
+  
+  header nav a:hover {
+    color: #2c3e50;
+  }
+   header nav button {
+    background-color: transparent;
+       border: none;
+        color: white;
+      cursor: pointer;
+      font-size: 1.1em;
+      padding: 0;
+      margin: 0 15px;
+      transition: color 0.3s;
+  }
+  
+  header nav button:hover {
+      color: #2c3e50;
+  }
+  main {
+    flex: 1;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .diseases-section {
+    background-color: white;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
+    width: 80%;
+    max-width: 800px;
+  }
+  .contact-section {
+     background-color: white;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      margin-bottom: 20px;
+       width: 80%;
+      max-width: 800px;
+  
+  }
+  .disease-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+  }
+  
+  .disease-card {
+    width: 250px;
+    background-color: #fff;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s;
+    cursor: pointer;
+  }
+  .disease-card:hover {
+    transform: scale(1.02);
+  }
+  .disease-card h3 {
+    padding: 10px;
+    text-align: center;
+    margin: 0;
+  }
+  
+  .disease-card p {
+    padding: 0 10px 10px 10px;
+    text-align: left;
+    font-size: 0.9em;
+  }
+  .contact-section p {
+    line-height: 1.6;
+  }
+  footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 1em 0;
+  }
+  
+  /* Модальное окно */
+  
+  .modal {
+    display: none;
+    /* Hidden by default */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.4);
+    transition: opacity 0.2s ease-in-out;
+  }
+  
+  .modal-content {
+    background-color: #fefefe;
+    margin: 10% auto;
+    /* Slightly shifted from 15% */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 60%;
+    border-radius: 10px;
+    position: relative;
+  }
+  
+  .close-button {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close-button:hover,
+  .close-button:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  .modal-body p {
+    line-height: 1.6;
+  }
+  
+  /* Адаптивность */
+  @media (max-width: 768px) {
+    header nav a {
+      display: block;
+      margin: 10px 0;
+      font-size: 1em;
+    }
+      header nav button {
+           display: block;
+           margin: 10px 0;
+            font-size: 1em;
+       }
+    .diseases-section {
+      width: 95%;
+      padding: 15px;
+    }
+     .contact-section {
+      width: 95%;
+      padding: 15px;
+    }
+    .disease-card {
+      width: calc(50% - 10px);
+      margin: 0 5px;
+    }
+    .modal-content {
+      width: 80%;
+      margin: 20% auto;
+    }
+  }
+  
+  @media (max-width: 480px) {
+      .disease-card {
+          width: 100%;
+          margin: 0;
+    }
+    header nav a {
+      margin: 5px 0;
+    }
+     header nav button {
+         margin: 5px 0;
+      }
+    .modal-content {
+          width: 90%;
+          margin: 30% auto;
+    }
+  }
